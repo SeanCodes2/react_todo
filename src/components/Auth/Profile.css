@@ -5,3 +5,15 @@ span.profile img {
     margin: 0 10px;
     border: 2px solid white;
 }
+
+article.banner {
+    /* border-radius:33%; */
+    border: 10px solid;
+    
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50% ;
+    border-top-color: chartreuse;
+    border-left-color: chartreuse;
+    border-right-color: red;
+    border-bottom-color: red;
+}
