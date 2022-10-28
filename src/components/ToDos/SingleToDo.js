@@ -3,6 +3,10 @@ import { useAuth } from '../../contexts/AuthContext'
 import { FaTrashAlt, FaEdit } from 'react-icons/fa'
 import ToDoEdit from './ToDoEdit'
 import  axios  from 'axios'
+import {ImCheckboxChecked, ImCheckboxUnchecked} from 'react-icons/im'
+
+import InputGroup from 'react-bootstrap/InputGroup'
+import { Form } from 'react-bootstrap'
 
 export default function SingleToDo(props) {
     const { currentUser } = useAuth()
@@ -15,11 +19,13 @@ export default function SingleToDo(props) {
             })
         }
     }
-
+   
     return (
         <tr>
             <td>{props.todos.name}</td>
-            <td>{props.todos.done === true ? <p>Yes</p> : <p>No</p>}</td>
+            <td>{props.todos.done === true ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}</td>
+             
+            {/* <td>{props.todos.done === true ? <p>Yes</p> : <p>No</p>}</td>             */}
             {/* EDIT UI */}
             {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN && (
                 <td>

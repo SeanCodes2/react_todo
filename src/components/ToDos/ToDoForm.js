@@ -4,6 +4,7 @@ import {Formik, Field, Form } from 'formik'
 import {toDoSchema} from '../../utilities/validationSchema'
 
 
+
 export default function ToDoForm(props) {
     
     const [categories, setCategories] = useState([]);
@@ -57,13 +58,13 @@ export default function ToDoForm(props) {
 
         {({errors, touched}) => (
             <Form id='toDoFrom' className='offset-2' >
-                <div className='form-group m-3 text-center col-10'>
+                <div className='form-group m-3 text-center col-9'>
                     <Field name='name' className='form-control' placeholder='Name' />
                     {errors.name && touched.name ? (
                         <div className='text-danger'>{errors.name}</div>
                     ) : null}
                 </div>
-                <div className='form-group m-3 col-10'>
+                <div className='form-group m-3 col-9'>
                     <Field as='select' name='categoryId' className='form-control'>
                         <option value='' disabled>[--Please Choose--]</option>                        
                         {categories.map(cat => 
@@ -73,13 +74,13 @@ export default function ToDoForm(props) {
                         )}
                     </Field>
                 </div> 
-                <div className='form-group m-3 col-10'><span className=''>Done?   </span>  
+                <div className='form-group m-3 col-9'><span className=''>Done?   </span>  
                     <label><Field name='done' type='checkbox' className='checkbox' /></label>
                     {errors.done && touched.done ? (
                         <div className='text-danger'>{errors.done}</div>
                     ) : null}
                 </div>          
-                <div className='form-group m-3 col-10'>
+                <div className='form-group m-3 col-9'>
                     <button type='submit' className='btn btn-info m-3'>Submit ToDo to API</button>
                 </div>          
             </Form>

@@ -19,12 +19,12 @@ export default function FilterCat(props) {
 
   return (
     <div className='text-center mt-5'>
-        {/* <button onClick={() => props.setFilter(0)} className='btn btn-outline-info bg-dark m-1'>All</button> */}
-        <button onClick={() => callTwoFunctions()} className='btn btn-outline-info bg-dark m-1'>All</button>
+        <button onClick={() => props.setFilter(0)} className='btn btn-outline-info bg-dark m-1'>All</button>
+        {/* <button onClick={() => callTwoFunctions()} className='btn btn-outline-info bg-dark m-1'>All</button>
 
         <button onClick={() => props.setDoneFilter(boolean(true))} className='btn btn-outline-info bg-dark m-1'>Complete</button>
 
-        <button onClick={() => props.setDoneFilter(boolean(false))} className='btn btn-outline-info bg-dark m-1'>Not Complete</button>
+        <button onClick={() => props.setDoneFilter(boolean(false))} className='btn btn-outline-info bg-dark m-1'>Not Complete</button> */}
 
         {/* Below we map all the categories to a button that filters resources on that Category */}
         {categories.map(cat => 

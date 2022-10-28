@@ -53,7 +53,7 @@ export default function ToDos(props) {
                 <thead className='table-secondary text-uppercase'>
                     <tr className='table-info'>
                         <th>Name</th>
-                        <th>Completed?</th>
+                        <th>Complete</th>
                         {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN &&
                             <th>Actions</th>
                         }
@@ -61,12 +61,16 @@ export default function ToDos(props) {
                 </thead>
                 <tbody>
                     {/* READ UI */}
-                    {/* {filter === 0 && doneFilter === '' ? todos.map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} /> ) 
+                    {}
                     
-                    : todos.filter((x) => x.categoryId === filter).filter((x) => x.done === doneFilter).map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} />)} */}
+                    
+                    {filter === 0 ? todos.map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} /> ) 
+                    : todos.filter((x) => x.categoryId === filter).map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} />)} 
 
 
-                    {filter === 0 ? todos.map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} /> ) : todos.filter((x) => x.categoryId === filter).map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} />)}
+
+
+                    {/* {filter === 0 ? todos.map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} /> ) : todos.filter((x) => x.categoryId === filter).map((x) => <SingleToDo key={x.toDoId} todos={x} getToDos={getToDos} />)} */}
                 </tbody>
             </table>
         </Container>

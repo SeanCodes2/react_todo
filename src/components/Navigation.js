@@ -20,7 +20,8 @@ export default function Navigation() {
       <Navbar.Toggle />
       <Navbar.Collapse className='justify-content-end'>
         <Nav className='fw-bold'>
-          <Link to='/Bootstrap' className='nav-link'>Bootstrap</Link>
+          
+          <Link to='/Home' className='nav-link'>Home</Link>
           {currentUser && 
           <>
           <Link to='/ToDos' className='nav-link'>ToDos</Link>
