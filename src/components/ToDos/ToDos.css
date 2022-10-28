@@ -1,0 +1,24 @@
+article.banner {
+    /* border-radius:33%; */
+    border: 10px solid;
+    
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50% ;
+    border-top-color: chartreuse;
+    border-left-color: chartreuse;
+    border-right-color: red;
+    border-bottom-color: red;
+}
+
+h1.todobanner {
+    font-size: bold;
+}
+
+table.table th {
+    color:rgb(10, 83, 59);
+    font-weight: bold;
+}
+
+.checkbox {
+    heigh: 40px;
+}

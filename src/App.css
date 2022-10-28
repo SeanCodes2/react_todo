@@ -1,4 +1,6 @@
 .App {
+  min-height: 83vh; /*VH stands for viewport height. 83 vh will take up 83% of the height of the user's viewport.*/
+  margin-bottom: 0 !important;
   text-align: center;
 }
 
